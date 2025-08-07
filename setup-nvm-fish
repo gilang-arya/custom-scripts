@@ -1,0 +1,14 @@
+#!/usr/bin/env fish
+
+echo "Installing Fisher plugin manager..."
+fisher install jorgebucaran/fisher
+
+echo "Installing nvm..."
+fisher install jorgebucaran/nvm.fish
+
+echo "Installing latest node.js..."
+nvm install latest
+
+set --universal nvm_default_version default
+
+echo "Installation complete!"
