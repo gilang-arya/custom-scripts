@@ -18,11 +18,9 @@ fc-cache -f "$FONT_DIR"
 echo "Fonts downloaded and cache refreshed."
 
 echo "Setting Japanese and Korean locales..."
-for LOCALE in "ja_JP.UTF-8 UTF-8" "ko_KR.UTF-8 UTF-8"; do
-  if ! grep -qF "$LOCALE" /etc/locale.gen; then
-    echo "$LOCALE" | sudo tee -a /etc/locale.gen >/dev/null
-  fi
-done
+# Tambahkan locale ke /etc/locale.gen jika belum ada
+echo "ja_JP.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen`
+echo "ko_KR.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen
 
 echo "Generating locales..."
 sudo locale-gen
