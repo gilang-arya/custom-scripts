@@ -19,7 +19,7 @@ echo "Fonts downloaded and cache refreshed."
 
 echo "Setting Japanese and Korean locales..."
 # Tambahkan locale ke /etc/locale.gen jika belum ada
-echo "ja_JP.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen`
+echo "ja_JP.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen
 echo "ko_KR.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen
 
 echo "Generating locales..."
